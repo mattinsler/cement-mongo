@@ -1,0 +1,56 @@
+data RequestEntity {
+	data Address {
+		string address;
+		int32 port;
+	}
+
+	string request_id;
+	string server_hostname;
+	date request_timestamp;
+	date response_timestamp;
+	int32 log_count;
+
+	Address source_address;
+	string request_method;
+	string request_url;
+	Address request_address;
+	string request_path;
+	string request_query;
+	map<string, string> header;
+	map<string, string> parameter;
+}
+
+data ExceptionEntity {
+	data Throwable {
+		string message;
+		string full_class_name;
+		list<StackElement> stack_element;
+	}
+
+	data StackElement {
+	    string filename;
+	    string method;
+	    int32 line;
+		string full_class_name;
+	}
+
+	list<Throwable> throwable;
+}
+
+data LogEntity {
+	enum Level {
+		Debug,
+		Info,
+		Warn,
+		Error,
+		Fatal
+	}
+
+	string request_id;
+	string server_hostname;
+	date timestamp;
+
+	Level level;
+	string message;
+	ExceptionEntity exception;
+}

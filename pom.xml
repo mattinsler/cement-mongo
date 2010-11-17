@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mattinsler</groupId>
+    <artifactId>cement-mongo</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>ibiblio-maven2-repository</id>
+            <name>ibiblio</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </repository>
+        <repository>
+            <id>jboss-maven2-release-repository</id>
+            <name>JBoss</name>
+            <url>http://repository.jboss.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.lowereast</groupId>
+            <artifactId>guiceymongo</artifactId>
+            <version>0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mattinsler</groupId>
+            <artifactId>cement</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+    <!--
+
+    mvn install:install-file -Dfile=/Users/mattinsler/code/com.lowereast.guiceymongo/guiceymongo-0.1.3-mongo.jar -DgroupId=com.lowereast -DartifactId=guiceymongo -Dversion=0.1.3 -Dpackaging=jar
+
+    -->
+
+    
+</project>
