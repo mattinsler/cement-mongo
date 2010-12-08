@@ -2,19 +2,32 @@ package com.mattinsler.cement.mongo.model;
 
 
 // Generated file!!!  DO NOT EDIT THIS!!!
-public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.IsData {
+
+/**
+ *
+ */
+public abstract class ExceptionEntity implements com.mattinsler.guiceymongo.data.IsData {
     public static final String ThrowableKey = "throwable";
-    public static com.lowereast.guiceymongo.data.DataWrapper<ExceptionEntity> DataWrapper =
-        new com.lowereast.guiceymongo.data.DataWrapper<ExceptionEntity>() {
+    public static com.mattinsler.guiceymongo.data.DataWrapper<ExceptionEntity> DataWrapper =
+        new com.mattinsler.guiceymongo.data.DataWrapper<ExceptionEntity>() {
             public ExceptionEntity.Wrapper wrap(com.mongodb.DBObject backing) {
                 return ExceptionEntity.wrap(backing);
             }
         };
 
+    /**
+     *
+     */
     public abstract int getThrowableCount();
 
+    /**
+     *
+     */
     public abstract java.util.List<ExceptionEntity.Throwable> getThrowableList();
 
+    /**
+     *
+     */
     public abstract ExceptionEntity.Throwable getThrowable(int index);
 
     public static ExceptionEntity.Wrapper wrap(com.mongodb.DBObject backing) {
@@ -26,7 +39,7 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
     }
 
     public static ExceptionEntity.Wrapper convertFrom(
-        com.lowereast.guiceymongo.data.IsWrapper<?> wrapped) {
+        com.mattinsler.guiceymongo.data.IsWrapper<?> wrapped) {
         if (wrapped == null) {
             return null;
         }
@@ -35,13 +48,13 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
     }
 
     public static ExceptionEntity.Wrapper convertFrom(
-        com.lowereast.guiceymongo.data.IsData data) {
+        com.mattinsler.guiceymongo.data.IsData data) {
         if ((data == null) ||
-                !(data instanceof com.lowereast.guiceymongo.data.IsWrapper<?>)) {
+                !(data instanceof com.mattinsler.guiceymongo.data.IsWrapper<?>)) {
             return null;
         }
 
-        return new ExceptionEntity.Wrapper(((com.lowereast.guiceymongo.data.IsWrapper<?>) data).getDBObject());
+        return new ExceptionEntity.Wrapper(((com.mattinsler.guiceymongo.data.IsWrapper<?>) data).getDBObject());
     }
 
     public static Builder newBuilder() {
@@ -81,14 +94,21 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
         return true;
     }
 
-    public static class Wrapper extends ExceptionEntity implements com.lowereast.guiceymongo.data.IsWrapper<ExceptionEntity> {
+    public static class Wrapper extends ExceptionEntity implements com.mattinsler.guiceymongo.data.IsWrapper<ExceptionEntity> {
         private com.mongodb.DBObject _backing;
+
+        /**
+         *
+         */
         protected java.util.List<ExceptionEntity.Throwable> _throwableList = null;
 
         private Wrapper(com.mongodb.DBObject backing) {
             _backing = backing;
         }
 
+        /**
+         *
+         */
         @Override
         public int getThrowableCount() {
             java.util.List<ExceptionEntity.Throwable> list = getThrowableList();
@@ -96,6 +116,9 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
             return (list == null) ? 0 : list.size();
         }
 
+        /**
+         *
+         */
         @SuppressWarnings("unchecked")
         @Override
         public java.util.List<ExceptionEntity.Throwable> getThrowableList() {
@@ -115,6 +138,9 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
             return _throwableList;
         }
 
+        /**
+         *
+         */
         @Override
         public ExceptionEntity.Throwable getThrowable(int index) {
             java.util.List<ExceptionEntity.Throwable> list = getThrowableList();
@@ -131,28 +157,43 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
         }
     }
 
-    public static class Builder extends ExceptionEntity implements com.lowereast.guiceymongo.data.IsBuilder<ExceptionEntity> {
+    public static class Builder extends ExceptionEntity implements com.mattinsler.guiceymongo.data.IsBuilder<ExceptionEntity> {
+        /**
+         *
+         */
         protected java.util.List<ExceptionEntity.Throwable> _throwableList = null;
 
         private Builder() {
         }
 
+        /**
+         *
+         */
         @Override
         public int getThrowableCount() {
             return (_throwableList == null) ? 0 : _throwableList.size();
         }
 
+        /**
+         *
+         */
         @Override
         public java.util.List<ExceptionEntity.Throwable> getThrowableList() {
             return java.util.Collections.unmodifiableList(_throwableList);
         }
 
+        /**
+         *
+         */
         @Override
         public ExceptionEntity.Throwable.Builder getThrowable(int index) {
             return (_throwableList == null) ? null
                                             : (ExceptionEntity.Throwable.Builder) _throwableList.get(index);
         }
 
+        /**
+         *
+         */
         public Builder addThrowable(ExceptionEntity.Throwable.Builder value) {
             if (_throwableList == null) {
                 _throwableList = new java.util.ArrayList<ExceptionEntity.Throwable>();
@@ -163,6 +204,9 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
             return this;
         }
 
+        /**
+         *
+         */
         public Builder addAllThrowable(
             Iterable<?extends ExceptionEntity.Throwable.Builder> value) {
             if (_throwableList == null) {
@@ -175,6 +219,9 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearThrowable() {
             _throwableList = null;
 
@@ -197,30 +244,54 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
         }
     }
 
-    public static abstract class Throwable implements com.lowereast.guiceymongo.data.IsData {
+    /**
+     *
+     */
+    public static abstract class Throwable implements com.mattinsler.guiceymongo.data.IsData {
         public static final String MessageKey = "message";
         public static final String FullClassNameKey = "full_class_name";
         public static final String StackElementKey = "stack_element";
-        public static com.lowereast.guiceymongo.data.DataWrapper<ExceptionEntity.Throwable> DataWrapper =
-            new com.lowereast.guiceymongo.data.DataWrapper<ExceptionEntity.Throwable>() {
+        public static com.mattinsler.guiceymongo.data.DataWrapper<ExceptionEntity.Throwable> DataWrapper =
+            new com.mattinsler.guiceymongo.data.DataWrapper<ExceptionEntity.Throwable>() {
                 public ExceptionEntity.Throwable.Wrapper wrap(
                     com.mongodb.DBObject backing) {
                     return ExceptionEntity.Throwable.wrap(backing);
                 }
             };
 
+        /**
+         *
+         */
         public abstract boolean hasMessage();
 
+        /**
+         *
+         */
         public abstract String getMessage();
 
+        /**
+         *
+         */
         public abstract boolean hasFullClassName();
 
+        /**
+         *
+         */
         public abstract String getFullClassName();
 
+        /**
+         *
+         */
         public abstract int getStackElementCount();
 
+        /**
+         *
+         */
         public abstract java.util.List<ExceptionEntity.StackElement> getStackElementList();
 
+        /**
+         *
+         */
         public abstract ExceptionEntity.StackElement getStackElement(int index);
 
         public static ExceptionEntity.Throwable.Wrapper wrap(
@@ -233,7 +304,7 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
         }
 
         public static ExceptionEntity.Throwable.Wrapper convertFrom(
-            com.lowereast.guiceymongo.data.IsWrapper<?> wrapped) {
+            com.mattinsler.guiceymongo.data.IsWrapper<?> wrapped) {
             if (wrapped == null) {
                 return null;
             }
@@ -242,13 +313,13 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
         }
 
         public static ExceptionEntity.Throwable.Wrapper convertFrom(
-            com.lowereast.guiceymongo.data.IsData data) {
+            com.mattinsler.guiceymongo.data.IsData data) {
             if ((data == null) ||
-                    !(data instanceof com.lowereast.guiceymongo.data.IsWrapper<?>)) {
+                    !(data instanceof com.mattinsler.guiceymongo.data.IsWrapper<?>)) {
                 return null;
             }
 
-            return new ExceptionEntity.Throwable.Wrapper(((com.lowereast.guiceymongo.data.IsWrapper<?>) data).getDBObject());
+            return new ExceptionEntity.Throwable.Wrapper(((com.mattinsler.guiceymongo.data.IsWrapper<?>) data).getDBObject());
         }
 
         public static Builder newBuilder() {
@@ -309,8 +380,12 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
             return true;
         }
 
-        public static class Wrapper extends Throwable implements com.lowereast.guiceymongo.data.IsWrapper<Throwable> {
+        public static class Wrapper extends Throwable implements com.mattinsler.guiceymongo.data.IsWrapper<Throwable> {
             private com.mongodb.DBObject _backing;
+
+            /**
+             *
+             */
             protected java.util.List<ExceptionEntity.StackElement> _stackElementList =
                 null;
 
@@ -318,26 +393,41 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
                 _backing = backing;
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasMessage() {
                 return _backing.containsField(MessageKey);
             }
 
+            /**
+             *
+             */
             @Override
             public String getMessage() {
                 return (String) _backing.get(MessageKey);
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasFullClassName() {
                 return _backing.containsField(FullClassNameKey);
             }
 
+            /**
+             *
+             */
             @Override
             public String getFullClassName() {
                 return (String) _backing.get(FullClassNameKey);
             }
 
+            /**
+             *
+             */
             @Override
             public int getStackElementCount() {
                 java.util.List<ExceptionEntity.StackElement> list = getStackElementList();
@@ -345,6 +435,9 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
                 return (list == null) ? 0 : list.size();
             }
 
+            /**
+             *
+             */
             @SuppressWarnings("unchecked")
             @Override
             public java.util.List<ExceptionEntity.StackElement> getStackElementList() {
@@ -364,6 +457,9 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
                 return _stackElementList;
             }
 
+            /**
+             *
+             */
             @Override
             public ExceptionEntity.StackElement getStackElement(int index) {
                 java.util.List<ExceptionEntity.StackElement> list = getStackElementList();
@@ -380,69 +476,113 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
             }
         }
 
-        public static class Builder extends Throwable implements com.lowereast.guiceymongo.data.IsBuilder<Throwable> {
+        public static class Builder extends Throwable implements com.mattinsler.guiceymongo.data.IsBuilder<Throwable> {
+            /**
+             *
+             */
             protected String _message = null;
+
+            /**
+             *
+             */
             protected String _fullClassName = null;
+
+            /**
+             *
+             */
             protected java.util.List<ExceptionEntity.StackElement> _stackElementList =
                 null;
 
             private Builder() {
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasMessage() {
                 return _message != null;
             }
 
+            /**
+             *
+             */
             @Override
             public String getMessage() {
                 return _message;
             }
 
+            /**
+             *
+             */
             public Builder setMessage(String value) {
                 _message = value;
 
                 return this;
             }
 
+            /**
+             *
+             */
             public Builder clearMessage() {
                 _message = null;
 
                 return this;
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasFullClassName() {
                 return _fullClassName != null;
             }
 
+            /**
+             *
+             */
             @Override
             public String getFullClassName() {
                 return _fullClassName;
             }
 
+            /**
+             *
+             */
             public Builder setFullClassName(String value) {
                 _fullClassName = value;
 
                 return this;
             }
 
+            /**
+             *
+             */
             public Builder clearFullClassName() {
                 _fullClassName = null;
 
                 return this;
             }
 
+            /**
+             *
+             */
             @Override
             public int getStackElementCount() {
                 return (_stackElementList == null) ? 0 : _stackElementList.size();
             }
 
+            /**
+             *
+             */
             @Override
             public java.util.List<ExceptionEntity.StackElement> getStackElementList() {
                 return java.util.Collections.unmodifiableList(_stackElementList);
             }
 
+            /**
+             *
+             */
             @Override
             public ExceptionEntity.StackElement.Builder getStackElement(
                 int index) {
@@ -450,6 +590,9 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
                                                    : (ExceptionEntity.StackElement.Builder) _stackElementList.get(index);
             }
 
+            /**
+             *
+             */
             public Builder addStackElement(
                 ExceptionEntity.StackElement.Builder value) {
                 if (_stackElementList == null) {
@@ -461,6 +604,9 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
                 return this;
             }
 
+            /**
+             *
+             */
             public Builder addAllStackElement(
                 Iterable<?extends ExceptionEntity.StackElement.Builder> value) {
                 if (_stackElementList == null) {
@@ -473,6 +619,9 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
                 return this;
             }
 
+            /**
+             *
+             */
             public Builder clearStackElement() {
                 _stackElementList = null;
 
@@ -504,33 +653,60 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
         }
     }
 
-    public static abstract class StackElement implements com.lowereast.guiceymongo.data.IsData {
+    /**
+     *
+     */
+    public static abstract class StackElement implements com.mattinsler.guiceymongo.data.IsData {
         public static final String FilenameKey = "filename";
         public static final String MethodKey = "method";
         public static final String LineKey = "line";
         public static final String FullClassNameKey = "full_class_name";
-        public static com.lowereast.guiceymongo.data.DataWrapper<ExceptionEntity.StackElement> DataWrapper =
-            new com.lowereast.guiceymongo.data.DataWrapper<ExceptionEntity.StackElement>() {
+        public static com.mattinsler.guiceymongo.data.DataWrapper<ExceptionEntity.StackElement> DataWrapper =
+            new com.mattinsler.guiceymongo.data.DataWrapper<ExceptionEntity.StackElement>() {
                 public ExceptionEntity.StackElement.Wrapper wrap(
                     com.mongodb.DBObject backing) {
                     return ExceptionEntity.StackElement.wrap(backing);
                 }
             };
 
+        /**
+         *
+         */
         public abstract boolean hasFilename();
 
+        /**
+         *
+         */
         public abstract String getFilename();
 
+        /**
+         *
+         */
         public abstract boolean hasMethod();
 
+        /**
+         *
+         */
         public abstract String getMethod();
 
+        /**
+         *
+         */
         public abstract boolean hasLine();
 
+        /**
+         *
+         */
         public abstract int getLine();
 
+        /**
+         *
+         */
         public abstract boolean hasFullClassName();
 
+        /**
+         *
+         */
         public abstract String getFullClassName();
 
         public static ExceptionEntity.StackElement.Wrapper wrap(
@@ -543,7 +719,7 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
         }
 
         public static ExceptionEntity.StackElement.Wrapper convertFrom(
-            com.lowereast.guiceymongo.data.IsWrapper<?> wrapped) {
+            com.mattinsler.guiceymongo.data.IsWrapper<?> wrapped) {
             if (wrapped == null) {
                 return null;
             }
@@ -552,13 +728,13 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
         }
 
         public static ExceptionEntity.StackElement.Wrapper convertFrom(
-            com.lowereast.guiceymongo.data.IsData data) {
+            com.mattinsler.guiceymongo.data.IsData data) {
             if ((data == null) ||
-                    !(data instanceof com.lowereast.guiceymongo.data.IsWrapper<?>)) {
+                    !(data instanceof com.mattinsler.guiceymongo.data.IsWrapper<?>)) {
                 return null;
             }
 
-            return new ExceptionEntity.StackElement.Wrapper(((com.lowereast.guiceymongo.data.IsWrapper<?>) data).getDBObject());
+            return new ExceptionEntity.StackElement.Wrapper(((com.mattinsler.guiceymongo.data.IsWrapper<?>) data).getDBObject());
         }
 
         public static Builder newBuilder() {
@@ -621,38 +797,56 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
             return true;
         }
 
-        public static class Wrapper extends StackElement implements com.lowereast.guiceymongo.data.IsWrapper<StackElement> {
+        public static class Wrapper extends StackElement implements com.mattinsler.guiceymongo.data.IsWrapper<StackElement> {
             private com.mongodb.DBObject _backing;
 
             private Wrapper(com.mongodb.DBObject backing) {
                 _backing = backing;
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasFilename() {
                 return _backing.containsField(FilenameKey);
             }
 
+            /**
+             *
+             */
             @Override
             public String getFilename() {
                 return (String) _backing.get(FilenameKey);
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasMethod() {
                 return _backing.containsField(MethodKey);
             }
 
+            /**
+             *
+             */
             @Override
             public String getMethod() {
                 return (String) _backing.get(MethodKey);
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasLine() {
                 return _backing.containsField(LineKey);
             }
 
+            /**
+             *
+             */
             @Override
             public int getLine() {
                 Object value = _backing.get(LineKey);
@@ -664,11 +858,17 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
                 return (Integer) value;
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasFullClassName() {
                 return _backing.containsField(FullClassNameKey);
             }
 
+            /**
+             *
+             */
             @Override
             public String getFullClassName() {
                 return (String) _backing.get(FullClassNameKey);
@@ -679,97 +879,160 @@ public abstract class ExceptionEntity implements com.lowereast.guiceymongo.data.
             }
         }
 
-        public static class Builder extends StackElement implements com.lowereast.guiceymongo.data.IsBuilder<StackElement> {
+        public static class Builder extends StackElement implements com.mattinsler.guiceymongo.data.IsBuilder<StackElement> {
+            /**
+             *
+             */
             protected String _filename = null;
+
+            /**
+             *
+             */
             protected String _method = null;
+
+            /**
+             *
+             */
             protected Integer _line = null;
+
+            /**
+             *
+             */
             protected String _fullClassName = null;
 
             private Builder() {
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasFilename() {
                 return _filename != null;
             }
 
+            /**
+             *
+             */
             @Override
             public String getFilename() {
                 return _filename;
             }
 
+            /**
+             *
+             */
             public Builder setFilename(String value) {
                 _filename = value;
 
                 return this;
             }
 
+            /**
+             *
+             */
             public Builder clearFilename() {
                 _filename = null;
 
                 return this;
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasMethod() {
                 return _method != null;
             }
 
+            /**
+             *
+             */
             @Override
             public String getMethod() {
                 return _method;
             }
 
+            /**
+             *
+             */
             public Builder setMethod(String value) {
                 _method = value;
 
                 return this;
             }
 
+            /**
+             *
+             */
             public Builder clearMethod() {
                 _method = null;
 
                 return this;
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasLine() {
                 return _line != null;
             }
 
+            /**
+             *
+             */
             @Override
             public int getLine() {
                 return _line;
             }
 
+            /**
+             *
+             */
             public Builder setLine(int value) {
                 _line = value;
 
                 return this;
             }
 
+            /**
+             *
+             */
             public Builder clearLine() {
                 _line = null;
 
                 return this;
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasFullClassName() {
                 return _fullClassName != null;
             }
 
+            /**
+             *
+             */
             @Override
             public String getFullClassName() {
                 return _fullClassName;
             }
 
+            /**
+             *
+             */
             public Builder setFullClassName(String value) {
                 _fullClassName = value;
 
                 return this;
             }
 
+            /**
+             *
+             */
             public Builder clearFullClassName() {
                 _fullClassName = null;
 

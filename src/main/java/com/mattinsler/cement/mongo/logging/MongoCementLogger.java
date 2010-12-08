@@ -1,14 +1,14 @@
 package com.mattinsler.cement.mongo.logging;
 
 import com.google.inject.Inject;
-import com.lowereast.guiceymongo.GuiceyCollection;
-import com.lowereast.guiceymongo.guice.annotation.GuiceyMongoCollection;
+import com.mattinsler.guiceymongo.GuiceyCollection;
 import com.mattinsler.cement.logging.AbstractCementLogger;
 import com.mattinsler.cement.mongo.guice.CementMongoCollection;
 import com.mattinsler.cement.mongo.model.ExceptionEntity;
 import com.mattinsler.cement.mongo.model.LogEntity;
 import com.mattinsler.cement.mongo.model.RequestEntity;
 import com.mattinsler.cement.util.ServerUtil;
+import com.mattinsler.guiceymongo.guice.annotation.MongoCollection;
 import com.mongodb.BasicDBObject;
 
 import java.util.Date;
@@ -28,8 +28,8 @@ public class MongoCementLogger extends AbstractCementLogger {
     private final Map<Level, LogEntity.Level> _levelMap = new HashMap<Level, LogEntity.Level>();
 
     @Inject
-    MongoCementLogger(@GuiceyMongoCollection(CementMongoCollection.Log) GuiceyCollection<LogEntity> logCollection,
-                      @GuiceyMongoCollection(CementMongoCollection.Request) GuiceyCollection<RequestEntity> requestCollection) {
+    MongoCementLogger(@MongoCollection(CementMongoCollection.Log) GuiceyCollection<LogEntity> logCollection,
+                      @MongoCollection(CementMongoCollection.Request) GuiceyCollection<RequestEntity> requestCollection) {
         _logCollection = logCollection;
         _requestCollection = requestCollection;
 

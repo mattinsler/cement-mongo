@@ -2,9 +2,9 @@ package com.mattinsler.cement.mongo.guice;
 
 import com.google.inject.Binder;
 import com.google.inject.Module;
-import com.lowereast.guiceymongo.guice.GuiceyMongo;
 import com.mattinsler.cement.mongo.model.LogEntity;
 import com.mattinsler.cement.mongo.model.RequestEntity;
+import com.mattinsler.guiceymongo.guice.GuiceyMongo;
 
 /**
  * Created by IntelliJ IDEA.

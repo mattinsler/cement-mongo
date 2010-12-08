@@ -2,7 +2,11 @@ package com.mattinsler.cement.mongo.model;
 
 
 // Generated file!!!  DO NOT EDIT THIS!!!
-public abstract class RequestEntity implements com.lowereast.guiceymongo.data.IsData {
+
+/**
+ *
+ */
+public abstract class RequestEntity implements com.mattinsler.guiceymongo.data.IsData {
     public static final String RequestIdKey = "request_id";
     public static final String ServerHostnameKey = "server_hostname";
     public static final String RequestTimestampKey = "request_timestamp";
@@ -16,75 +20,171 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
     public static final String RequestQueryKey = "request_query";
     public static final String HeaderKey = "header";
     public static final String ParameterKey = "parameter";
-    public static com.lowereast.guiceymongo.data.DataWrapper<RequestEntity> DataWrapper =
-        new com.lowereast.guiceymongo.data.DataWrapper<RequestEntity>() {
+    public static com.mattinsler.guiceymongo.data.DataWrapper<RequestEntity> DataWrapper =
+        new com.mattinsler.guiceymongo.data.DataWrapper<RequestEntity>() {
             public RequestEntity.Wrapper wrap(com.mongodb.DBObject backing) {
                 return RequestEntity.wrap(backing);
             }
         };
 
+    /**
+     *
+     */
     public abstract boolean hasRequestId();
 
+    /**
+     *
+     */
     public abstract String getRequestId();
 
+    /**
+     *
+     */
     public abstract boolean hasServerHostname();
 
+    /**
+     *
+     */
     public abstract String getServerHostname();
 
+    /**
+     *
+     */
     public abstract boolean hasRequestTimestamp();
 
+    /**
+     *
+     */
     public abstract java.util.Date getRequestTimestamp();
 
+    /**
+     *
+     */
     public abstract boolean hasResponseTimestamp();
 
+    /**
+     *
+     */
     public abstract java.util.Date getResponseTimestamp();
 
+    /**
+     *
+     */
     public abstract boolean hasLogCount();
 
+    /**
+     *
+     */
     public abstract int getLogCount();
 
+    /**
+     *
+     */
     public abstract boolean hasSourceAddress();
 
+    /**
+     *
+     */
     public abstract RequestEntity.Address getSourceAddress();
 
+    /**
+     *
+     */
     public abstract boolean hasRequestMethod();
 
+    /**
+     *
+     */
     public abstract String getRequestMethod();
 
+    /**
+     *
+     */
     public abstract boolean hasRequestUrl();
 
+    /**
+     *
+     */
     public abstract String getRequestUrl();
 
+    /**
+     *
+     */
     public abstract boolean hasRequestAddress();
 
+    /**
+     *
+     */
     public abstract RequestEntity.Address getRequestAddress();
 
+    /**
+     *
+     */
     public abstract boolean hasRequestPath();
 
+    /**
+     *
+     */
     public abstract String getRequestPath();
 
+    /**
+     *
+     */
     public abstract boolean hasRequestQuery();
 
+    /**
+     *
+     */
     public abstract String getRequestQuery();
 
+    /**
+     *
+     */
     public abstract java.util.Map<String, String> getHeaderMap();
 
+    /**
+     *
+     */
     public abstract boolean containsHeader(String key);
 
+    /**
+     *
+     */
     public abstract int getHeaderCount();
 
+    /**
+     *
+     */
     public abstract String getHeader(String key);
 
+    /**
+     *
+     */
     public abstract java.util.Set<String> getHeaderKeys();
 
+    /**
+     *
+     */
     public abstract java.util.Map<String, String> getParameterMap();
 
+    /**
+     *
+     */
     public abstract boolean containsParameter(String key);
 
+    /**
+     *
+     */
     public abstract int getParameterCount();
 
+    /**
+     *
+     */
     public abstract String getParameter(String key);
 
+    /**
+     *
+     */
     public abstract java.util.Set<String> getParameterKeys();
 
     public static RequestEntity.Wrapper wrap(com.mongodb.DBObject backing) {
@@ -96,7 +196,7 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
     }
 
     public static RequestEntity.Wrapper convertFrom(
-        com.lowereast.guiceymongo.data.IsWrapper<?> wrapped) {
+        com.mattinsler.guiceymongo.data.IsWrapper<?> wrapped) {
         if (wrapped == null) {
             return null;
         }
@@ -105,13 +205,13 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
     }
 
     public static RequestEntity.Wrapper convertFrom(
-        com.lowereast.guiceymongo.data.IsData data) {
+        com.mattinsler.guiceymongo.data.IsData data) {
         if ((data == null) ||
-                !(data instanceof com.lowereast.guiceymongo.data.IsWrapper<?>)) {
+                !(data instanceof com.mattinsler.guiceymongo.data.IsWrapper<?>)) {
             return null;
         }
 
-        return new RequestEntity.Wrapper(((com.lowereast.guiceymongo.data.IsWrapper<?>) data).getDBObject());
+        return new RequestEntity.Wrapper(((com.mattinsler.guiceymongo.data.IsWrapper<?>) data).getDBObject());
     }
 
     public static Builder newBuilder() {
@@ -289,62 +389,108 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
         return true;
     }
 
-    public static class Wrapper extends RequestEntity implements com.lowereast.guiceymongo.data.IsWrapper<RequestEntity> {
+    public static class Wrapper extends RequestEntity implements com.mattinsler.guiceymongo.data.IsWrapper<RequestEntity> {
         private com.mongodb.DBObject _backing;
+
+        /**
+         *
+         */
         protected RequestEntity.Address.Wrapper _sourceAddress = null;
+
+        /**
+         *
+         */
         protected RequestEntity.Address.Wrapper _requestAddress = null;
+
+        /**
+         *
+         */
         protected java.util.Map<String, String> _headerMap = null;
+
+        /**
+         *
+         */
         protected java.util.Map<String, String> _parameterMap = null;
 
         private Wrapper(com.mongodb.DBObject backing) {
             _backing = backing;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestId() {
             return _backing.containsField(RequestIdKey);
         }
 
+        /**
+         *
+         */
         @Override
         public String getRequestId() {
             return (String) _backing.get(RequestIdKey);
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasServerHostname() {
             return _backing.containsField(ServerHostnameKey);
         }
 
+        /**
+         *
+         */
         @Override
         public String getServerHostname() {
             return (String) _backing.get(ServerHostnameKey);
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestTimestamp() {
             return _backing.containsField(RequestTimestampKey);
         }
 
+        /**
+         *
+         */
         @Override
         public java.util.Date getRequestTimestamp() {
             return (java.util.Date) _backing.get(RequestTimestampKey);
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasResponseTimestamp() {
             return _backing.containsField(ResponseTimestampKey);
         }
 
+        /**
+         *
+         */
         @Override
         public java.util.Date getResponseTimestamp() {
             return (java.util.Date) _backing.get(ResponseTimestampKey);
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasLogCount() {
             return _backing.containsField(LogCountKey);
         }
 
+        /**
+         *
+         */
         @Override
         public int getLogCount() {
             Object value = _backing.get(LogCountKey);
@@ -356,11 +502,17 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return (Integer) value;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasSourceAddress() {
             return _backing.containsField(SourceAddressKey);
         }
 
+        /**
+         *
+         */
         @Override
         public RequestEntity.Address.Wrapper getSourceAddress() {
             if (_sourceAddress == null) {
@@ -374,31 +526,49 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return _sourceAddress;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestMethod() {
             return _backing.containsField(RequestMethodKey);
         }
 
+        /**
+         *
+         */
         @Override
         public String getRequestMethod() {
             return (String) _backing.get(RequestMethodKey);
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestUrl() {
             return _backing.containsField(RequestUrlKey);
         }
 
+        /**
+         *
+         */
         @Override
         public String getRequestUrl() {
             return (String) _backing.get(RequestUrlKey);
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestAddress() {
             return _backing.containsField(RequestAddressKey);
         }
 
+        /**
+         *
+         */
         @Override
         public RequestEntity.Address.Wrapper getRequestAddress() {
             if (_requestAddress == null) {
@@ -412,26 +582,41 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return _requestAddress;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestPath() {
             return _backing.containsField(RequestPathKey);
         }
 
+        /**
+         *
+         */
         @Override
         public String getRequestPath() {
             return (String) _backing.get(RequestPathKey);
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestQuery() {
             return _backing.containsField(RequestQueryKey);
         }
 
+        /**
+         *
+         */
         @Override
         public String getRequestQuery() {
             return (String) _backing.get(RequestQueryKey);
         }
 
+        /**
+         *
+         */
         public java.util.Map<String, String> getHeaderMap() {
             if (_headerMap == null) {
                 Object value = _backing.get(HeaderKey);
@@ -441,7 +626,7 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
                     com.mongodb.DBObject obj = (com.mongodb.DBObject) value;
 
                     for (String key : obj.keySet()) {
-                        map.put(com.lowereast.guiceymongo.util.DBObjectUtil.decodeKey(
+                        map.put(com.mattinsler.guiceymongo.util.DBObjectUtil.decodeKey(
                                 key), (String) obj.get(key));
                     }
 
@@ -452,6 +637,9 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return _headerMap;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean containsHeader(String key) {
             java.util.Map<String, String> map = getHeaderMap();
@@ -459,6 +647,9 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return (map == null) ? false : map.containsKey(key);
         }
 
+        /**
+         *
+         */
         @Override
         public int getHeaderCount() {
             java.util.Map<String, String> map = getHeaderMap();
@@ -466,6 +657,9 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return (map == null) ? 0 : map.size();
         }
 
+        /**
+         *
+         */
         @Override
         public String getHeader(String key) {
             java.util.Map<String, String> map = getHeaderMap();
@@ -473,6 +667,9 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return (map == null) ? null : map.get(key);
         }
 
+        /**
+         *
+         */
         @Override
         public java.util.Set<String> getHeaderKeys() {
             java.util.Map<String, String> map = getHeaderMap();
@@ -480,6 +677,9 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return (map == null) ? null : map.keySet();
         }
 
+        /**
+         *
+         */
         public java.util.Map<String, String> getParameterMap() {
             if (_parameterMap == null) {
                 Object value = _backing.get(ParameterKey);
@@ -489,7 +689,7 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
                     com.mongodb.DBObject obj = (com.mongodb.DBObject) value;
 
                     for (String key : obj.keySet()) {
-                        map.put(com.lowereast.guiceymongo.util.DBObjectUtil.decodeKey(
+                        map.put(com.mattinsler.guiceymongo.util.DBObjectUtil.decodeKey(
                                 key), (String) obj.get(key));
                     }
 
@@ -500,6 +700,9 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return _parameterMap;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean containsParameter(String key) {
             java.util.Map<String, String> map = getParameterMap();
@@ -507,6 +710,9 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return (map == null) ? false : map.containsKey(key);
         }
 
+        /**
+         *
+         */
         @Override
         public int getParameterCount() {
             java.util.Map<String, String> map = getParameterMap();
@@ -514,6 +720,9 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return (map == null) ? 0 : map.size();
         }
 
+        /**
+         *
+         */
         @Override
         public String getParameter(String key) {
             java.util.Map<String, String> map = getParameterMap();
@@ -521,6 +730,9 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return (map == null) ? null : map.get(key);
         }
 
+        /**
+         *
+         */
         @Override
         public java.util.Set<String> getParameterKeys() {
             java.util.Map<String, String> map = getParameterMap();
@@ -533,144 +745,268 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
         }
     }
 
-    public static class Builder extends RequestEntity implements com.lowereast.guiceymongo.data.IsBuilder<RequestEntity> {
+    public static class Builder extends RequestEntity implements com.mattinsler.guiceymongo.data.IsBuilder<RequestEntity> {
+        /**
+         *
+         */
         protected String _requestId = null;
+
+        /**
+         *
+         */
         protected String _serverHostname = null;
+
+        /**
+         *
+         */
         protected java.util.Date _requestTimestamp = null;
+
+        /**
+         *
+         */
         protected java.util.Date _responseTimestamp = null;
+
+        /**
+         *
+         */
         protected Integer _logCount = null;
+
+        /**
+         *
+         */
         protected RequestEntity.Address.Builder _sourceAddress = null;
+
+        /**
+         *
+         */
         protected String _requestMethod = null;
+
+        /**
+         *
+         */
         protected String _requestUrl = null;
+
+        /**
+         *
+         */
         protected RequestEntity.Address.Builder _requestAddress = null;
+
+        /**
+         *
+         */
         protected String _requestPath = null;
+
+        /**
+         *
+         */
         protected String _requestQuery = null;
+
+        /**
+         *
+         */
         protected java.util.Map<String, String> _headerMap = null;
+
+        /**
+         *
+         */
+
+        /**
+         *
+         */
         protected java.util.Map<String, String> _parameterMap = null;
 
         private Builder() {
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestId() {
             return _requestId != null;
         }
 
+        /**
+         *
+         */
         @Override
         public String getRequestId() {
             return _requestId;
         }
 
+        /**
+         *
+         */
         public Builder setRequestId(String value) {
             _requestId = value;
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearRequestId() {
             _requestId = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasServerHostname() {
             return _serverHostname != null;
         }
 
+        /**
+         *
+         */
         @Override
         public String getServerHostname() {
             return _serverHostname;
         }
 
+        /**
+         *
+         */
         public Builder setServerHostname(String value) {
             _serverHostname = value;
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearServerHostname() {
             _serverHostname = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestTimestamp() {
             return _requestTimestamp != null;
         }
 
+        /**
+         *
+         */
         @Override
         public java.util.Date getRequestTimestamp() {
             return _requestTimestamp;
         }
 
+        /**
+         *
+         */
         public Builder setRequestTimestamp(java.util.Date value) {
             _requestTimestamp = value;
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearRequestTimestamp() {
             _requestTimestamp = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasResponseTimestamp() {
             return _responseTimestamp != null;
         }
 
+        /**
+         *
+         */
         @Override
         public java.util.Date getResponseTimestamp() {
             return _responseTimestamp;
         }
 
+        /**
+         *
+         */
         public Builder setResponseTimestamp(java.util.Date value) {
             _responseTimestamp = value;
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearResponseTimestamp() {
             _responseTimestamp = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasLogCount() {
             return _logCount != null;
         }
 
+        /**
+         *
+         */
         @Override
         public int getLogCount() {
             return _logCount;
         }
 
+        /**
+         *
+         */
         public Builder setLogCount(int value) {
             _logCount = value;
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearLogCount() {
             _logCount = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasSourceAddress() {
             return _sourceAddress != null;
         }
 
+        /**
+         *
+         */
         @Override
         public RequestEntity.Address.Builder getSourceAddress() {
             return _sourceAddress;
         }
 
+        /**
+         *
+         */
         public RequestEntity.Address.Builder getOrCreateSourceAddress() {
             if (_sourceAddress == null) {
                 _sourceAddress = RequestEntity.Address.newBuilder();
@@ -679,72 +1015,111 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return _sourceAddress;
         }
 
+        /**
+         *
+         */
         public Builder setSourceAddress(RequestEntity.Address.Builder value) {
             _sourceAddress = value;
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearSourceAddress() {
             _sourceAddress = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestMethod() {
             return _requestMethod != null;
         }
 
+        /**
+         *
+         */
         @Override
         public String getRequestMethod() {
             return _requestMethod;
         }
 
+        /**
+         *
+         */
         public Builder setRequestMethod(String value) {
             _requestMethod = value;
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearRequestMethod() {
             _requestMethod = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestUrl() {
             return _requestUrl != null;
         }
 
+        /**
+         *
+         */
         @Override
         public String getRequestUrl() {
             return _requestUrl;
         }
 
+        /**
+         *
+         */
         public Builder setRequestUrl(String value) {
             _requestUrl = value;
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearRequestUrl() {
             _requestUrl = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestAddress() {
             return _requestAddress != null;
         }
 
+        /**
+         *
+         */
         @Override
         public RequestEntity.Address.Builder getRequestAddress() {
             return _requestAddress;
         }
 
+        /**
+         *
+         */
         public RequestEntity.Address.Builder getOrCreateRequestAddress() {
             if (_requestAddress == null) {
                 _requestAddress = RequestEntity.Address.newBuilder();
@@ -753,62 +1128,95 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return _requestAddress;
         }
 
+        /**
+         *
+         */
         public Builder setRequestAddress(RequestEntity.Address.Builder value) {
             _requestAddress = value;
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearRequestAddress() {
             _requestAddress = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestPath() {
             return _requestPath != null;
         }
 
+        /**
+         *
+         */
         @Override
         public String getRequestPath() {
             return _requestPath;
         }
 
+        /**
+         *
+         */
         public Builder setRequestPath(String value) {
             _requestPath = value;
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearRequestPath() {
             _requestPath = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean hasRequestQuery() {
             return _requestQuery != null;
         }
 
+        /**
+         *
+         */
         @Override
         public String getRequestQuery() {
             return _requestQuery;
         }
 
+        /**
+         *
+         */
         public Builder setRequestQuery(String value) {
             _requestQuery = value;
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearRequestQuery() {
             _requestQuery = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         public java.util.Map<String, String> getHeaderMap() {
             if (_headerMap == null) {
                 _headerMap = new java.util.HashMap<String, String>();
@@ -817,38 +1225,59 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return _headerMap;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean containsHeader(String key) {
             return (_headerMap == null) ? false : _headerMap.containsKey(key);
         }
 
+        /**
+         *
+         */
         @Override
         public String getHeader(String key) {
             return (_headerMap == null) ? null : (String) _headerMap.get(key);
         }
 
+        /**
+         *
+         */
         @Override
         public int getHeaderCount() {
             return (_headerMap == null) ? 0 : _headerMap.size();
         }
 
+        /**
+         *
+         */
         @Override
         public java.util.Set<String> getHeaderKeys() {
             return (_headerMap == null) ? null : _headerMap.keySet();
         }
 
+        /**
+         *
+         */
         public Builder putHeader(String key, String value) {
             getHeaderMap().put(key, value);
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearHeader() {
             _headerMap = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         public java.util.Map<String, String> getParameterMap() {
             if (_parameterMap == null) {
                 _parameterMap = new java.util.HashMap<String, String>();
@@ -857,40 +1286,61 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return _parameterMap;
         }
 
+        /**
+         *
+         */
         @Override
         public boolean containsParameter(String key) {
             return (_parameterMap == null) ? false
                                            : _parameterMap.containsKey(key);
         }
 
+        /**
+         *
+         */
         @Override
         public String getParameter(String key) {
             return (_parameterMap == null) ? null
                                            : (String) _parameterMap.get(key);
         }
 
+        /**
+         *
+         */
         @Override
         public int getParameterCount() {
             return (_parameterMap == null) ? 0 : _parameterMap.size();
         }
 
+        /**
+         *
+         */
         @Override
         public java.util.Set<String> getParameterKeys() {
             return (_parameterMap == null) ? null : _parameterMap.keySet();
         }
 
+        /**
+         *
+         */
         public Builder putParameter(String key, String value) {
             getParameterMap().put(key, value);
 
             return this;
         }
 
+        /**
+         *
+         */
         public Builder clearParameter() {
             _parameterMap = null;
 
             return this;
         }
 
+        /**
+         *
+         */
         public com.mongodb.DBObject build() {
             com.mongodb.DBObject dbObject = new com.mongodb.BasicDBObject();
 
@@ -950,23 +1400,38 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
         }
     }
 
-    public static abstract class Address implements com.lowereast.guiceymongo.data.IsData {
+    /**
+     *
+     */
+    public static abstract class Address implements com.mattinsler.guiceymongo.data.IsData {
         public static final String AddressKey = "address";
         public static final String PortKey = "port";
-        public static com.lowereast.guiceymongo.data.DataWrapper<RequestEntity.Address> DataWrapper =
-            new com.lowereast.guiceymongo.data.DataWrapper<RequestEntity.Address>() {
+        public static com.mattinsler.guiceymongo.data.DataWrapper<RequestEntity.Address> DataWrapper =
+            new com.mattinsler.guiceymongo.data.DataWrapper<RequestEntity.Address>() {
                 public RequestEntity.Address.Wrapper wrap(
                     com.mongodb.DBObject backing) {
                     return RequestEntity.Address.wrap(backing);
                 }
             };
 
+        /**
+         *
+         */
         public abstract boolean hasAddress();
 
+        /**
+         *
+         */
         public abstract String getAddress();
 
+        /**
+         *
+         */
         public abstract boolean hasPort();
 
+        /**
+         *
+         */
         public abstract int getPort();
 
         public static RequestEntity.Address.Wrapper wrap(
@@ -979,7 +1444,7 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
         }
 
         public static RequestEntity.Address.Wrapper convertFrom(
-            com.lowereast.guiceymongo.data.IsWrapper<?> wrapped) {
+            com.mattinsler.guiceymongo.data.IsWrapper<?> wrapped) {
             if (wrapped == null) {
                 return null;
             }
@@ -988,13 +1453,13 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
         }
 
         public static RequestEntity.Address.Wrapper convertFrom(
-            com.lowereast.guiceymongo.data.IsData data) {
+            com.mattinsler.guiceymongo.data.IsData data) {
             if ((data == null) ||
-                    !(data instanceof com.lowereast.guiceymongo.data.IsWrapper<?>)) {
+                    !(data instanceof com.mattinsler.guiceymongo.data.IsWrapper<?>)) {
                 return null;
             }
 
-            return new RequestEntity.Address.Wrapper(((com.lowereast.guiceymongo.data.IsWrapper<?>) data).getDBObject());
+            return new RequestEntity.Address.Wrapper(((com.mattinsler.guiceymongo.data.IsWrapper<?>) data).getDBObject());
         }
 
         public static Builder newBuilder() {
@@ -1037,28 +1502,40 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             return true;
         }
 
-        public static class Wrapper extends Address implements com.lowereast.guiceymongo.data.IsWrapper<Address> {
+        public static class Wrapper extends Address implements com.mattinsler.guiceymongo.data.IsWrapper<Address> {
             private com.mongodb.DBObject _backing;
 
             private Wrapper(com.mongodb.DBObject backing) {
                 _backing = backing;
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasAddress() {
                 return _backing.containsField(AddressKey);
             }
 
+            /**
+             *
+             */
             @Override
             public String getAddress() {
                 return (String) _backing.get(AddressKey);
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasPort() {
                 return _backing.containsField(PortKey);
             }
 
+            /**
+             *
+             */
             @Override
             public int getPort() {
                 Object value = _backing.get(PortKey);
@@ -1075,51 +1552,82 @@ public abstract class RequestEntity implements com.lowereast.guiceymongo.data.Is
             }
         }
 
-        public static class Builder extends Address implements com.lowereast.guiceymongo.data.IsBuilder<Address> {
+        public static class Builder extends Address implements com.mattinsler.guiceymongo.data.IsBuilder<Address> {
+            /**
+             *
+             */
             protected String _address = null;
+
+            /**
+             *
+             */
             protected Integer _port = null;
 
             private Builder() {
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasAddress() {
                 return _address != null;
             }
 
+            /**
+             *
+             */
             @Override
             public String getAddress() {
                 return _address;
             }
 
+            /**
+             *
+             */
             public Builder setAddress(String value) {
                 _address = value;
 
                 return this;
             }
 
+            /**
+             *
+             */
             public Builder clearAddress() {
                 _address = null;
 
                 return this;
             }
 
+            /**
+             *
+             */
             @Override
             public boolean hasPort() {
                 return _port != null;
             }
 
+            /**
+             *
+             */
             @Override
             public int getPort() {
                 return _port;
             }
 
+            /**
+             *
+             */
             public Builder setPort(int value) {
                 _port = value;
 
                 return this;
             }
 
+            /**
+             *
+             */
             public Builder clearPort() {
                 _port = null;
 

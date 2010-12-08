@@ -1,12 +1,12 @@
 package com.mattinsler.cement.mongo;
 
 import com.google.inject.Inject;
-import com.lowereast.guiceymongo.GuiceyCollection;
-import com.lowereast.guiceymongo.guice.annotation.GuiceyMongoCollection;
 import com.mattinsler.cement.CementRequestLogWriter;
 import com.mattinsler.cement.mongo.guice.CementMongoCollection;
 import com.mattinsler.cement.mongo.model.RequestEntity;
 import com.mattinsler.cement.util.ServerUtil;
+import com.mattinsler.guiceymongo.GuiceyCollection;
+import com.mattinsler.guiceymongo.guice.annotation.MongoCollection;
 import com.mongodb.BasicDBObject;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,7 +26,7 @@ public class MongoCementRequestLogWriter implements CementRequestLogWriter {
     private final GuiceyCollection<RequestEntity> _requestCollection;
 
     @Inject
-    MongoCementRequestLogWriter(@GuiceyMongoCollection(CementMongoCollection.Request) GuiceyCollection<RequestEntity> requestCollection) {
+    MongoCementRequestLogWriter(@MongoCollection(CementMongoCollection.Request) GuiceyCollection<RequestEntity> requestCollection) {
         _requestCollection = requestCollection;
     }
     
