@@ -7,7 +7,40 @@
     <groupId>com.mattinsler</groupId>
     <artifactId>cement-mongo</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
+    <version>0.1</version>
+
+	<name>cement-mongo</name>
+	<description>Cement with Mongo</description>
+	<url>http://www.github.com/mattinsler/cement-mongo</url>
+
+	<licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+	<scm>
+		<url>scm:git:git@github.com:mattinsler/cement-mongo.git</url>
+		<connection>scm:git:git@github.com:mattinsler/cement-mongo.git</connection>
+		<developerConnection>scm:git:git@github.com:mattinsler/cement-mongo.git</developerConnection>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>repo</id>
+			<url>http://mattinsler.github.com/repository/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshot-repo</id>
+			<url>http://mattinsler.github.com/repository/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
     <build>
         <plugins>
@@ -19,6 +52,12 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.1</version>
+			</plugin>
         </plugins>
     </build>
 
@@ -48,7 +87,7 @@
         <dependency>
             <groupId>com.mattinsler</groupId>
             <artifactId>cement</artifactId>
-            <version>1.0</version>
+            <version>0.1</version>
         </dependency>
 
         <!-- Test Dependencies -->
